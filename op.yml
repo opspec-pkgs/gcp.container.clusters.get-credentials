@@ -1,12 +1,14 @@
 name: github.com/opspec-pkgs/gcp.k8s-engine.get-kubeconfig
-description: gets a kubeconfig file for a google cloud platform k8s engine cluster
+description: |
+  gets a kubeconfig file for a google cloud platform k8s engine cluster
+  > note: auth in the returned file will be valid for 1hr
 inputs:
   clusterName:
     string:
       description: name of k8s engine cluster
   keyFile:
     file:
-      description: key file for a GCP service account
+      description: key file for a GCP service account w/ `Kubernetes Engine Developer` role
       isSecret: true
   projectId:
     string:
@@ -21,11 +23,11 @@ outputs:
 version: 1.0.0
 run:
   container:
-    image: { ref: 'google/cloud-sdk:181.0.0-alpine' }
+    image: { ref: 'opspecpkgs/gcp.k8s-engine.get-kubeconfig:1.0.0' }
     files:
       /cmd.sh:
       /keyFile: $(keyFile)
-      /root/.kube/.config: $()
+      /kubeConfig: $(kubeConfig)
     cmd: [ /cmd.sh ]
     envVars:
       clusterName:
