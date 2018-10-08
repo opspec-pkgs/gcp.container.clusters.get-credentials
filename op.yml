@@ -21,10 +21,10 @@ outputs:
     file:
       description: the kube config
 opspec: 0.1.6
-version: 1.0.0
+version: 1.2.0
 run:
   container:
-    image: { ref: 'opspecpkgs/gcp.gke.get-kubeconfig:1.0.0' }
+    image: { ref: 'opspecpkgs/gcp.gke.get-kubeconfig:1.2.0' }
     files:
       /cmd.sh:
       /keyFile: $(keyFile)
