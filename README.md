@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/opspec-pkgs/gcp.gke.get-kubeconfig.svg?branch=master)](https://travis-ci.org/opspec-pkgs/gcp.gke.get-kubeconfig)
+[![Build Status](https://travis-ci.org/opspec-pkgs/gcp.container.clusters.get-credentials.svg?branch=master)](https://travis-ci.org/opspec-pkgs/gcp.container.clusters.get-credentials)
 
 <img src="icon.svg" alt="icon" height="100px">
 
@@ -17,24 +17,26 @@ the op uses [![opspec 0.1.6](https://img.shields.io/badge/opspec-0.1.6-brightgre
 ## Install
 
 ```shell
-opctl op install github.com/opspec-pkgs/gcp.gke.get-kubeconfig#1.2.0
+opctl op install github.com/opspec-pkgs/gcp.container.clusters.get-credentials#1.3.0
 ```
 
 ## Run
 
 ```
-opctl run github.com/opspec-pkgs/gcp.gke.get-kubeconfig#1.2.0
+opctl run github.com/opspec-pkgs/gcp.container.clusters.get-credentials#1.3.0
 ```
 
 ## Compose
 
 ```yaml
 op:
-  ref: github.com/opspec-pkgs/gcp.gke.get-kubeconfig#1.2.0
+  ref: github.com/opspec-pkgs/gcp.container.clusters.get-credentials#1.3.0
   inputs:
     clusterName:
     keyFile:
     projectId:
+    # params w/ default
+    region:
     zone:
   outputs:
     kubeConfig:
@@ -45,7 +47,7 @@ op:
 join us on
 [![Slack](https://opctl-slackin.herokuapp.com/badge.svg)](https://opctl-slackin.herokuapp.com/)
 or
-[open an issue](https://github.com/opspec-pkgs/gcp.gke.get-kubeconfig/issues)
+[open an issue](https://github.com/opspec-pkgs/gcp.container.clusters.get-credentials/issues)
 
 # Releases
 

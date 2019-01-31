@@ -5,6 +5,16 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[1.3.0] - 2019-01-31
+
+### Added
+
+- region and internalIp inputs
+
+### Changed
+
+- name changed for consistency
+
 ## \[1.2.0] - 2018-10-08
 
 ### Changed
